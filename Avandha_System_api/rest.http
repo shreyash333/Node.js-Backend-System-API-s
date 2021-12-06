@@ -1,0 +1,275 @@
+
+###
+GET http://localhost:12345/about
+
+###
+POST  http://localhost:12345/get_otp  HTTP/1.1
+Content-Type: application/json
+
+{
+    "email":"shreyash0816@gmail.com"
+}
+
+###
+POST  http://localhost:12345/verify_otp  HTTP/1.1
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoMDgxNkBnbWFpbC5jb20iLCJpYXQiOjE2MTc5NzM5MzQsImV4cCI6MTYxNzk3NDIzNH0.i08pPWHrXNzOiTvTg-YEaI3PLk4agwm61biZqzFh_vY",
+    "otp":"405817"
+  }
+
+
+###
+
+POST http://localhost:12345/user_data
+Content-Type: application/json
+
+{
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoMDgxNkBnbWFpbC5jb20iLCJpYXQiOjE2MTc5NzM5NjYsImV4cCI6MTYxODgzNzk2Nn0.YRgLB_YPu5l4WDZVaDCvryEP7kA0kQ1uTwLsJrEB-PA",
+    "full_name":"Ashwin Tiwari",
+    "user_type":"company",
+    "phone_no":"7030346254",
+    "state":"Maharashtra",
+    "user_district":"Palghar",
+    "user_address":"Om nagar, Vasai west",
+    "password":"123456"
+}
+
+###
+
+POST http://localhost:12345/update_data
+Content-Type: application/json
+
+{
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNzaHJleWFzaDM0QGdtYWlsLmNvbSIsImlhdCI6MTYxNzg2OTA4OSwiZXhwIjoxNjE4NzMzMDg5fQ.zf0pspPzaLZum8CokqpN9LotTDvflfVLAmvUc9SAF18",
+    "full_name":"Shreyash Sanjay Singh",
+    "phone_no":"7030346245",
+    "state":"Maharashtra",
+    "user_district":"Palghar",
+    "user_address":"Om Nagar, Vasai west"
+}
+
+
+###
+POST http://localhost:12345/login
+Content-Type: application/json
+
+{
+"email":"shreyashsingh601@gmail.com",
+"password":"123456",
+"usertype":"store"
+}
+
+
+###
+POST http://localhost:12345/forget_password
+Content-Type: application/json
+
+{
+  "email":"sshreyash34@gmail.com"
+
+}
+
+
+###
+POST http://localhost:12345/getCurrentDB
+Content-Type: application/json
+
+{
+  "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNzaHJleWFzaDM0QGdtYWlsLmNvbSIsImlhdCI6MTYxODQwMzk0MCwiZXhwIjoxNjE5MjY3OTQwfQ.SF-dctqUlBWZ2YiIMfIVd81lAGwbvcES7uv4TvTwhFU",
+  "user_id":"1",
+  "user_type":"customer"
+}
+
+###
+POST http://localhost:12345/getMySendOrders
+Content-Type: application/json
+
+{
+  "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNzaHJleWFzaDM0QGdtYWlsLmNvbSIsImlhdCI6MTYxNzg2OTI5NCwiZXhwIjoxNjE4NzMzMjk0fQ.-jSlJR-VY1n_6lR-BGNmMs27Vuub41BPoGTWJBylVao",
+  "userid" : "1",
+  "usertype": "customer"
+
+}
+
+
+###
+POST http://localhost:12345/getReceiveOrders
+Content-Type: application/json
+
+{
+  "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoc2luZ2g2MDFAZ21haWwuY29tIiwiaWF0IjoxNjE3OTczODcwLCJleHAiOjE2MTg4Mzc4NzB9.g49oeI_UJAsf9D-MApNwQRcn-pcb6jEK4avIeGVMc0A",
+"userid": "2",
+"usertype": "store"
+
+}
+
+
+###
+POST http://localhost:12345/addneworder
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNzaHJleWFzaDM0QGdtYWlsLmNvbSIsImlhdCI6MTYxNzg2OTI5NCwiZXhwIjoxNjE4NzMzMjk0fQ.-jSlJR-VY1n_6lR-BGNmMs27Vuub41BPoGTWJBylVao",
+    "orderType" :"donate",
+    "senderId":"1",
+    "senderRating":0,
+    "sendername":"Shreyash Singh",
+    "sendertype":"customer",
+    "senderemail":"sshreyash34@gmail.com",
+    "senderphone":"7030346254",
+    "senderstate":"Maharashtra",
+    "senderdistrict":"Palghar",
+    "senderaddress":"Om nagar, Vasai west",
+    "ordercategory":"cloth",
+    "expectedcost":"0",
+    "quatitiy":"10 peice",
+    "message":"Give Up"
+
+}
+
+
+
+###
+POST http://localhost:12345/acceptOrder
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoc2luZ2g2MDFAZ21haWwuY29tIiwiaWF0IjoxNjE3ODg4OTE1LCJleHAiOjE2MTg3NTI5MTV9.r-6Y04m-7s-x3PDrfo2-ZYRQARJg93vzrxWiBgizACo",
+    "orderid":"1",
+    "accepterId":"2",
+    "accepterRating":0,
+    "acceptername":"Aditya Singh",
+    "acceptertype":"store",
+    "accepteremail":"shreyashsingh601@gmail.com",
+    "accepterphone":"7030346254",
+    "accepterstate":"Maharashtra",
+    "accepterdistrict":"Palghar",
+    "accepteraddress":"Om nagar, Vasai west"
+
+}
+
+
+###
+POST http://localhost:12345/rejectOrder
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoc2luZ2g2MDFAZ21haWwuY29tIiwiaWF0IjoxNjE3ODg4OTE1LCJleHAiOjE2MTg3NTI5MTV9.r-6Y04m-7s-x3PDrfo2-ZYRQARJg93vzrxWiBgizACo",
+    "userid":"2",
+    "orderid":"2"
+
+}
+
+
+###
+POST http://localhost:12345/deleteOrder
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNzaHJleWFzaDM0QGdtYWlsLmNvbSIsImlhdCI6MTYxNzg2OTI5NCwiZXhwIjoxNjE4NzMzMjk0fQ.-jSlJR-VY1n_6lR-BGNmMs27Vuub41BPoGTWJBylVao",
+    "userid":"1",
+    "orderid":"3"
+}
+
+
+###
+POST http://localhost:12345/completeorder
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNzaHJleWFzaDM0QGdtYWlsLmNvbSIsImlhdCI6MTYxNzg2OTI5NCwiZXhwIjoxNjE4NzMzMjk0fQ.-jSlJR-VY1n_6lR-BGNmMs27Vuub41BPoGTWJBylVao",
+    "userid":"1",
+    "orderid":"3"
+}
+
+
+
+###
+POST http://localhost:12345/getAllStores
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNzaHJleWFzaDM0QGdtYWlsLmNvbSIsImlhdCI6MTYxNzg2OTI5NCwiZXhwIjoxNjE4NzMzMjk0fQ.-jSlJR-VY1n_6lR-BGNmMs27Vuub41BPoGTWJBylVao",
+    "userid":"1"
+    
+}
+
+
+###
+POST http://localhost:12345/getAllCompanies
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoc2luZ2g2MDFAZ21haWwuY29tIiwiaWF0IjoxNjE3ODg4OTE1LCJleHAiOjE2MTg3NTI5MTV9.r-6Y04m-7s-x3PDrfo2-ZYRQARJg93vzrxWiBgizACo",
+    "userid":"2"
+}
+
+
+###
+POST http://localhost:12345/getMyStoresCustomer
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNzaHJleWFzaDM0QGdtYWlsLmNvbSIsImlhdCI6MTYxNzg2OTI5NCwiZXhwIjoxNjE4NzMzMjk0fQ.-jSlJR-VY1n_6lR-BGNmMs27Vuub41BPoGTWJBylVao",
+    "userid":"1"
+}
+
+
+###
+POST http://localhost:12345/getMyCustomerStores
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoc2luZ2g2MDFAZ21haWwuY29tIiwiaWF0IjoxNjE3ODg4OTE1LCJleHAiOjE2MTg3NTI5MTV9.r-6Y04m-7s-x3PDrfo2-ZYRQARJg93vzrxWiBgizACo",
+    "userid":"2"
+}
+
+
+###
+POST http://localhost:12345/getMyStoreCompany
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoc2luZ2g2MDFAZ21haWwuY29tIiwiaWF0IjoxNjE3ODg4OTE1LCJleHAiOjE2MTg3NTI5MTV9.r-6Y04m-7s-x3PDrfo2-ZYRQARJg93vzrxWiBgizACo",
+    "userid":"2"
+}
+
+
+###
+POST http://localhost:12345/getMyCompanyStore
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoc2luZ2g2MDFAZ21haWwuY29tIiwiaWF0IjoxNjE3ODg4OTE1LCJleHAiOjE2MTg3NTI5MTV9.r-6Y04m-7s-x3PDrfo2-ZYRQARJg93vzrxWiBgizACo",
+    "userid":"2"
+}
+
+
+
+
+###
+POST http://localhost:12345/rateuser
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoc2luZ2g2MDFAZ21haWwuY29tIiwiaWF0IjoxNjE3OTczODcwLCJleHAiOjE2MTg4Mzc4NzB9.g49oeI_UJAsf9D-MApNwQRcn-pcb6jEK4avIeGVMc0A",
+  "ratedbyid":2,
+  "rate":4,
+  "ratedtoid":3}
+
+
+
+
+
+###
+POST http://localhost:12345/getrecommendation
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoc2luZ2g2MDFAZ21haWwuY29tIiwiaWF0IjoxNjE3OTczODcwLCJleHAiOjE2MTg4Mzc4NzB9.g49oeI_UJAsf9D-MApNwQRcn-pcb6jEK4avIeGVMc0A",
+  "userid" : "2",
+    "category" : "plastic"
+}
+

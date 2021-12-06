@@ -1,0 +1,218 @@
+create DATABASE `scrap_deal`;
+use `scrap_deal`;
+
+create table `otp_data`(
+email varchar(250) NOT NULL,
+otp varchar(250),
+PRIMARY KEY ( email)
+);
+
+create table `rejected_order`(
+user_id varchar(250) NOT NULL,
+order_id varchar(250),
+PRIMARY KEY ( user_id,order_id )
+);
+
+create table `video_recommendation`(
+video_link_id INT NOT NULL AUTO_INCREMENT,
+category varchar(250),
+title varchar(500),
+link varchar(500),
+PRIMARY KEY ( video_link_id )
+);
+
+INSERT INTO video_recommendation ( category, title,link )
+   VALUES ( "plastic", "DIY | Unbelievable reuse of old Polythene/ Plastic bag at home | Best out of waste","https://youtu.be/mQczbJbOjGc" ),
+   ("plastic","18 PLASTIC BAG HACKS AND IDEAS" , "https://youtu.be/w-Ud0SzgFHc"), 
+   ("plastic","38 Creative Ideas With Plastic Bottles | Thaitrick" , "https://youtu.be/xEAOvFG1AmM"),
+   ("plastic","29 PLASTIC BOTTLE RECYCLING ideas to surprise your mind" , "https://youtu.be/9wHWKPaS9jM"),
+   ("plastic","How to make an amazing vertical garden using plastic bottles" , "https://youtu.be/lz07BPuFOTI"),
+   ("plastic","Coconut tree from plastic bottle" , "https://youtu.be/IBA0eCO9GRA"),
+   ("plastic","Reuse Empty Packets | Best out of Waste | Recycling plastic bags | DIY home Decorating Idea" , "https://youtu.be/hXvLzfMGEjo"),
+   ("plastic","20 CHEAP YET COOL DIY IDEAS TO RECYCLE PLASTIC BOTTLES" , "https://youtu.be/xEu287eMvj4"),
+   ("plastic","DIY craft idea | Best out Waste Plastic Bag reuse idea" , "https://youtu.be/ApgJUylbXSs"),
+   ("plastic","Polythene bag reuse idea / Best out of waste / Flower from polythene bag / Easy no cost flower" , "https://youtu.be/bJaKibFaBuo"),
+   ("paper","Best Out Of Waste New Craft Idea | Art And Craft | Amazing craft Idea | New Idea using waste Paper" , "https://youtu.be/zd_iROxkGkc"),
+   ("paper","DIY craft Ideas from Disposable Paper Cup" , "https://youtu.be/NEBm8CWlvIo"),
+   ("paper","Disposable Coffee Cup Craft – Home Décor Idea Using Coffee Cup – Waste Material" , "https://youtu.be/SXfPAFEviko"),
+   ("paper","Paper Wall Decoration Ideas-paper Craft-DIY-Paper flower wallhanging" , "https://youtu.be/6AtgHP0o_M4"),
+   ("paper","How To Make A Starry Cardboard Lampshade" , "https://youtu.be/9NcjsekUML8"),
+   ("paper","Reuse Old Book and Make a New Book/DIY Recycled Paper Notebook" , "https://youtu.be/IyTbr8mtAMo"),
+   ("paper","18 BRILLIANT DIYs YOU CAN MAKE FROM CARDBOARD" , "https://youtu.be/ZqWopILSq2o"),
+   ("paper","DIY 2020 Bedside Table Storage Cabinet From Cardboard | Recycled Cardboard Furniture" , "https://youtu.be/YpqPwwE1SbI"),
+   ("paper","Best Out Of Waste Matchbox Reuse Idea | Waste Material Craft Idea" , "https://youtu.be/vbOA6XlrUqM"),
+   ("paper","Best reuse idea of waste books pages | Best diy craft idea | Best out of waste idea" , "https://youtu.be/igCfVQbTvAU"),
+   ("metal","3 SMART TIN CANS IDEAS!| Best Reuse Idea" , "https://youtu.be/ApgJUylbXSs"),
+   ("metal","Best Out of Waste || Waste Material Craft Idea || DIY Recycled Tin Can Craft" , "https://youtu.be/UHBX2saVjeU"),
+   ("metal","DIY Phone Case - Life Hack With Soda Can" , "https://youtu.be/IgGdx_ky4bo"),
+   ("metal","How to make cool craft from waste metal bottle caps" , "https://youtu.be/JnCVDplQh_s"),
+   ("metal","Custom Harley Davidson from Bottle Caps" , "https://youtu.be/7bJbeMOxtYU"),
+   ("glass","5 Glass Bottle Decoration Ideas | Bottle Painting | Mason Jar Decorations" , "https://youtu.be/sAsqfTAg86Y"),
+   ("glass","Easy Mason Jar Crafts" , "https://youtu.be/SSUkMAD7TNs"),
+   ("glass","Decorative Epoxy Lamp with Flower and Pebble Stone" , "https://youtu.be/2nWg_iOHIrg"),
+   ("glass","26 BEAUTIFUL DIYS FOR YOUR GARDEN" , "https://youtu.be/q2Tb3oa0utI"),
+   ("glass","DIY Mason Jar Glow in the Dark" , "https://youtu.be/mbRI854-Fl0"),
+   ("clothes","DIY Scrunchies | DIY Ruffle Hair Bands with old clothes" , "https://youtu.be/3ghGkYQjib8"),
+   ("clothes","YOU MUST WATCH THIS VIDEO BEFORE THROWING WASTE CLOTH" , "https://youtu.be/yhVWKPBiWtQ"),
+   ("clothes","TURN old cloths into floor mat / door mat / carpet / old cloths reuse idea" , "https://youtu.be/NTSN5aLhN8Q"),
+   ("clothes","Old Clothes ! 12 DIY Clothes Reuse Hacks" , "https://youtu.be/-WHY0vLPc50"),
+   ("clothes","9 Smart hacks to Reuse Old Clothes! Sewing Tips & Tricks" , "https://youtu.be/Fm6sfU76fpU"),
+   ("wood","3 Beautiful Gifts You Can make from Wood Scrap, Scrap Wood Ideas" , "https://youtu.be/h6_45lK4okc"),
+   ("wood","Waste wood craft ideas/woodslice lettering ideas/recycling project ideas" , "https://youtu.be/nZ8_tB2OvEU"),
+   ("wood","3 Brilliant Crafts from Wood Scrap | Scrap Wood Ideas" , "https://youtu.be/ARnTE_mL2N0"),
+   ("wood","best out of waste ideas | wall shelf idea for home decoration" , "https://youtu.be/0g0wAqsmj0k"),
+   ("wood","How to reuse wood shavings" , "https://youtu.be/53-dVTF8SXg"),
+   ("electronic","DIY e Waste Craft" , "https://youtu.be/NwE2jgaxX64"),
+   ("electronic","Things you can make from old, dead laptops" , "https://youtu.be/WLP_L7Mgz6M"),
+   ("electronic","HDD broken? - DON' T THROW THAT AWAY!!! here is a BIG IDEA" , "https://youtu.be/kIXBrBvraOw"),
+   ("electronic","Disney Imagine That | Episode 2 | eWaste | Hindi | Disney Channel" , "https://youtu.be/6x82U-BWV94"),
+   ("electronic","How to Reuse Waste mobile charger" , "https://youtu.be/EyMMY9Eylac");
+
+
+
+create table `blog_recommendation`(
+blog_link_id INT NOT NULL AUTO_INCREMENT,
+category varchar(250),
+title varchar(500),
+link varchar(500),
+PRIMARY KEY ( blog_link_id )
+);
+
+INSERT INTO blog_recommendation ( category, title,link )
+   VALUES 
+   ( "plastic", "17 cool products made from recycled plastics","https://www.wwf.org.au/news/blogs/17-cool-products-made-from-recycled-plastics#gs.ycdwk9" ),
+   ("plastic","19 Ways to Reuse and Recycle Empty Plastic Bottles" , "https://www.budgetdumpster.com/blog/diy-plastic-bottles-recycling/"), 
+   ("plastic","20 Ingenious Ways to Reuse Plastic Bottles" , "https://www.thebetterindia.com/58509/reuse-plastic-bottles-reduce-pollution-waste/"),
+   ("plastic","13 Useful Things You Should Do With Your Old Grocery Bags" , "https://www.onegoodthingbyjillee.com/60-ways-to-reuse-plastic-bags/"),
+   ("plastic","20 CREATIVE WAYS TO REUSE PLASTIC BAGS" , "https://artsycraftsymom.com/ways-to-reuse-plastic-bags/"),
+   ("plastic","Alternative uses for waste" , "https://www.forgerecycling.co.uk/blog/category/alternative-uses-for-waste/"),
+   ("paper","10 Ways to Reuse Waste Paper" , "https://www.ecoideaz.com/showcase/10-ways-re-use-waste-paper"),
+   ("paper","25 Best Out of Waste Material Craft Ideas for Kids" , "https://parenting.firstcry.com/articles/best-out-of-waste-material-craft-ideas-for-kids/"),
+   ("paper","34 uses for old newspapers " , "https://friendsoftheearth.uk/sustainable-living/34-uses-old-newspapers"),
+   ("paper","How To Make a Paper Bag From Old Newspaper in 5 Minutes" , "https://www.thebetterindia.com/204849/how-to-recycle-old-newspaper-how-to-make-paper-bag-sustainable-zero-waste/"),
+   ("paper","How to recycle paper at home" , "https://www.cleanipedia.com/gb/sustainability/recycle-paper.html"),
+   ("paper","Waste Free Craft Ideas" , "https://www.brightstarkids.com.au/blog/creating/shoebox-crafts/"),
+   ("clothes","50+ Clever Things You Can Do With Old Clothes" , "https://www.goodhousekeeping.com/home/craft-ideas/g4281/old-clothes-diy-projects/"),
+   ("clothes","5 Ways to Reduce Clothing Waste" , "https://sustainability.ncsu.edu/blog/changeyourstate/closets-afterlife-5-ways-reduce-clothing-waste/"),
+   ("clothes","9 of the Best Ideas for Used Clothes" , "https://growensemble.com/what-to-do-with-old-clothes/"),
+   ("clothes","HOW TO REDUCE TEXTILE WASTE IN YOUR WARDROBE" , "https://thecanoshoe.com/blogs/blog/how-to-reduce-textile-waste-in-your-wardrobe"),
+   ("clothes","DIY handmade face mask by using cloth bag" , "https://www.momspresso.com/parenting/iam-delighted-to-post-my-first-blog-looking-forward-to-share-my-views-and-here-i-go/article/diy-handmade-face-mask-by-using-cloth-bag-best-out-of-waste-i5gmny6uzkxs"),
+   ("glass","20 ‘Why Didn’t I Think of That’ Ideas for Reusing Glass Bottles and Jars" , "https://www.budgetdumpster.com/blog/reusing-glass-bottles-and-jars/"),
+   ("glass","18 CREATIVE DIY GLASS BOTTLE DECOR & CRAFT IDEAS" , "https://www.apieceofrainbow.com/gorgeous-useful-reuse-glass/"),
+   ("glass","25 ways to reuse an empty glass jar" , "https://www.forgerecycling.co.uk/blog/reuse-glass-jar/"),
+   ("glass","9 DIY Projects That Reuse Your Old Glass Bottles" , "https://www.treehugger.com/diy-projects-reuse-your-old-glass-bottles-4864269"),
+   ("glass","10 Easy DIY Ideas With Glass Bottles That Will Brighten Your Day" , "https://www.livspace.com/in/magazine/10-diys-reusing-old-glass-bottles"),
+   ("glass","10 Things to Do With Your Old Glasses" , "https://www.hgtv.com/design/decorating/design-101/10-ways-to-repurpose-glassware-pictures"),
+   ("wood","21 Clever Little Things to Do with Scrap Wood" , "https://www.bobvila.com/slideshow/21-clever-little-things-to-do-with-scrap-wood-49986"),
+   ("wood","waste material craft" , "https://in.pinterest.com/reportergaurav/waste-material-craft/"),
+   ("wood","7 Snazzy New Uses for Old Furniture" , "https://www.homelane.com/blog/10-snazzy-new-uses-for-old-furniture/"),
+   ("wood","10 Best Solutions on How to Transform Old Furniture" , "https://ecobnb.com/blog/2020/05/solutions-transform-old-furniture/"),
+   ("wood","6 Ways to Reuse Old Wooden Pieces of Furniture" , "https://didyouknowhomes.com/6-ways-to-reuse-old-wooden-pieces-of-furniture/"),
+   ("electronic","Recycle Electronic Waste At Home" , "https://mrelectric.com/blog/recycle-electronic-waste-at-home"),
+   ("electronic","kids can help solve the e-waste problem" , "http://www.electronicstakeback.com/how-to-recycle-electronics/resources-for-kids/"),
+   ("electronic","5 Creative Uses for E-waste" , "https://eridirect.com/blog/2016/04/5-creative-uses-for-e-waste/"),
+   ("electronic","10 Tips for Managing e-Waste" , "https://theartofsimple.net/10-ways-to-recycle-your-technology-and-manage-e-waste/"),
+   ("electronic","17 Tips for E-Waste Disposal at Home & Work" , "https://olceseservices.com/17-tips-e-waste-disposal-home-work/"),
+   ("metal","How to recycle household waste metal" , "https://www.metals4u.co.uk/blog/how-to-recycle-household-waste-metal"),
+   ("metal","Ways to Reuse Metal" , "https://classroom.synonym.com/ways-to-reuse-metal-12080291.html"),
+   ("metal","3 Ways To Reuse Household Metals" , "https://www.metalmenrecycling.com.au/3-ways-to-reuse-household-metals/"),
+   ("metal","How to Repurpose Used Old Metal Lockers" , "https://usedsecondhand.co.za/repurpose-used-old-metal-lockers-06-05-2016/"),
+   ("metal","24 Creative Ways to Repurpose Old Chairs and Add Chic Vibe to Your Home" , "https://homebnc.com/best-repurposed-old-chair-ideas/");
+   
+
+create table `scrap_user`(
+   user_id INT NOT NULL AUTO_INCREMENT,
+   user_rating INT,
+   user_name VARCHAR(100),
+   user_type VARCHAR(100),
+   user_email VARCHAR(100) NOT NULL,
+   user_phone VARCHAR(40),
+   user_state VARCHAR(150),
+   user_district VARCHAR(150),
+   user_address VARCHAR(250),
+   user_password VARCHAR(40),
+   PRIMARY KEY ( user_id )
+);
+
+create table `rate_list`(
+   rated_by VARCHAR(100) NOT NULL,
+   rated_to VARCHAR(100) NOT NULL,
+   user_rating INT,
+   PRIMARY KEY ( rated_by,rated_to )
+);
+
+create table `store_connection`(
+   user_id VARCHAR(100) NOT NULL,
+   relation_type VARCHAR(100) NOT NULL,
+   con_id VARCHAR(100) NOT NULL,
+   con_name VARCHAR(100),
+   con_type VARCHAR(100),
+   con_email VARCHAR(100),
+   con_phone VARCHAR(40),
+   con_state VARCHAR(150),
+   con_district VARCHAR(150),
+   con_address VARCHAR(250),
+   PRIMARY KEY ( user_id,con_id )
+);
+
+create table `customer_connection`(
+   user_id VARCHAR(100) NOT NULL,
+   relation_type VARCHAR(100) NOT NULL,
+   con_id VARCHAR(100) NOT NULL,
+   con_name VARCHAR(100),
+   con_type VARCHAR(100),
+   con_email VARCHAR(100),
+   con_phone VARCHAR(40),
+   con_state VARCHAR(150),
+   con_district VARCHAR(150),
+   con_address VARCHAR(250),
+   PRIMARY KEY ( user_id,con_id )
+);
+
+create table `company_connection`(
+   user_id VARCHAR(100) NOT NULL,
+   relation_type VARCHAR(100) NOT NULL,
+   con_id VARCHAR(100) NOT NULL,
+   con_name VARCHAR(100),
+   con_type VARCHAR(100),
+   con_email VARCHAR(100),
+   con_phone VARCHAR(40),
+   con_state VARCHAR(150),
+   con_district VARCHAR(150),
+   con_address VARCHAR(250),
+   PRIMARY KEY ( user_id,con_id )
+);
+
+create table `orderList`(
+   order_id INT NOT NULL AUTO_INCREMENT,
+   order_type VARCHAR(100),
+   sender_id VARCHAR(100),
+   sender_rating INT,
+   sender_name VARCHAR(100),
+   sender_type VARCHAR(100),
+   sender_email VARCHAR(100),
+   sender_phone VARCHAR(40),
+   sender_state VARCHAR(150),
+   sender_district VARCHAR(150),
+   sender_address VARCHAR(250),
+   accepter_id VARCHAR(100),
+   accepter_rating INT,
+   accepter_name VARCHAR(100),
+   accepter_type VARCHAR(100),
+   accepter_email VARCHAR(100),
+   accepter_phone VARCHAR(40),
+   accepter_state VARCHAR(150),
+   accepter_district VARCHAR(150),
+   accepter_address VARCHAR(250),
+   order_category VARCHAR(100),
+   expected_cost VARCHAR(100),
+   quatitiy VARCHAR(100),
+   message VARCHAR(100),
+   order_status VARCHAR(40),
+   is_delete VARCHAR(40),
+   PRIMARY KEY ( order_id )
+);
+
+
+
+

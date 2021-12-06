@@ -1,0 +1,3 @@
+create DATABASE `repojects`;
+use `repojects`;
+create table `otp_data`(email varchar(250),otp varchar(250));

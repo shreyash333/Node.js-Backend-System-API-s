@@ -1,0 +1,53 @@
+create DATABASE `repo_jects`;
+use `repo_jects`;
+
+create table student_user(
+   student_id INT NOT NULL AUTO_INCREMENT,
+   student_name VARCHAR(40),
+   student_email VARCHAR(40) NOT NULL,
+   student_phone VARCHAR(40),
+   student_password VARCHAR(40),
+   student_state VARCHAR(40),
+   PRIMARY KEY ( student_id )
+);
+
+create table rate_list(
+   student_id VARCHAR(40) NOT NULL,
+   project_id VARCHAR(40) NOT NULL,
+   PRIMARY KEY ( student_id,project_id )
+   
+);
+
+create table project(
+   project_id INT NOT NULL AUTO_INCREMENT,
+   project_name VARCHAR(100) NOT NULL,
+   project_rating INT,
+   university_name VARCHAR(100) NOT NULL,
+   degree VARCHAR(100) NOT NULL,
+   stream VARCHAR(100) NOT NULL,
+   domain VARCHAR(100) NOT NULL,
+   description VARCHAR(500) NOT NULL,
+   tech_used VARCHAR(500) NOT NULL,
+   reference VARCHAR(500) NOT NULL,
+   diificulty VARCHAR(100) NOT NULL,
+   keywords VARCHAR(100) NOT NULL,
+   is_delete VARCHAR(25) NOT NULL,
+   project_year VARCHAR(25) NOT NULL,
+   student_phone VARCHAR(40) NOT NULL,
+   student_name VARCHAR(40) NOT NULL,
+   student_email VARCHAR(40) NOT NULL,
+   student_id VARCHAR(40) NOT NULL,
+   student_state VARCHAR(40) NOT NULL,
+   code_link VARCHAR(100) NOT NULL,
+   paper_link VARCHAR(100) NOT NULL,
+   video_link VARCHAR(100) NOT NULL,
+   PRIMARY KEY ( project_id )
+   
+);
+
+create table `otp_data`(
+email varchar(250),
+otp varchar(250)
+PRIMARY KEY ( email)
+);
+

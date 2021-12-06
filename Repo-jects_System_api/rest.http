@@ -1,0 +1,174 @@
+
+
+POST  http://localhost:12345/get_otp  HTTP/1.1
+Content-Type: application/json
+
+{
+    "email":"shreyash0816@gmail.com"
+}
+
+###
+POST  http://localhost:12345/verify_otp  HTTP/1.1
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoMDgxNkBnbWFpbC5jb20iLCJpYXQiOjE2MTY3Mzk0NzQsImV4cCI6MTYxNjczOTc3NH0._mIuQsLGreTVJ1LDZB7-xIh4gOEWQEg4luJSlL4Yb2s",
+    "otp":"794304"
+  }
+
+
+###
+
+POST http://localhost:12345/user_data
+Content-Type: application/json
+
+{
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoMDgxNkBnbWFpbC5jb20iLCJpYXQiOjE2MTY3Mzk1MTMsImV4cCI6MTYxNzYwMzUxM30.P53cEsL58OaTDDq1HeB392RMpT_IZDtVgJO6-yymhX4",
+    "full_name":"Shreyash Singh",
+    "phone_no":"7030346254",
+    "state":"Maharashtra",
+    "password":"123456"
+}
+
+###
+
+POST http://localhost:12345/update_data
+Content-Type: application/json
+
+{
+   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNzaHJleWFzaDM0QGdtYWlsLmNvbSIsImlhdCI6MTYxNjc0NjY0OCwiZXhwIjoxNjE3NjEwNjQ4fQ.RSvwBM7n_XtmPgJCZCzsZBnXU8q6ydi7XMFwbgOFlYU",
+    "full_name":"Shreyash",
+    "phone_no":"7030346254",
+    "state":"Maharashtra"
+   
+}
+
+###
+POST http://localhost:12345/login
+Content-Type: application/json
+
+{
+  "email":"sshreyash34@gmail.com",
+  "password":"123456"
+
+}
+
+
+###
+POST http://localhost:12345/forget_password
+Content-Type: application/json
+
+{
+  "email":"shreyashsingh601@gmail.com"
+
+}
+
+
+###
+POST http://localhost:12345/getCurrentDB
+Content-Type: application/json
+
+{
+  "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNzaHJleWFzaDM0QGdtYWlsLmNvbSIsImlhdCI6MTYxNjk1NzA3OSwiZXhwIjoxNjE3ODIxMDc5fQ.lz-mGT8vmv1oGXfALTMIEEKR8DRme3M2Esbxyvtrvyk",
+  "student_id":"1"
+
+}
+
+###
+POST http://localhost:12345/getmyprojects
+Content-Type: application/json
+
+{
+  "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoc2luZ2g2MDFAZ21haWwuY29tIiwiaWF0IjoxNjE2NjYyNjkxLCJleHAiOjE2MTc1MjY2OTF9.toHDZIPlL0bJ_NS303BQ9IfCZm8mJuQSdUjVYFtFz2o",
+  "student_id":"2"
+
+}
+
+
+###
+POST http://localhost:12345/searchproject
+Content-Type: application/json
+
+{
+  "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoc2luZ2g2MDFAZ21haWwuY29tIiwiaWF0IjoxNjE2NjYyNjkxLCJleHAiOjE2MTc1MjY2OTF9.toHDZIPlL0bJ_NS303BQ9IfCZm8mJuQSdUjVYFtFz2o",
+  "value":"2021",
+  "type":"year"
+
+}
+
+
+###
+POST http://localhost:12345/uploadproject
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNzaHJleWFzaDM0QGdtYWlsLmNvbSIsImlhdCI6MTYxNjk1NzA3OSwiZXhwIjoxNjE3ODIxMDc5fQ.lz-mGT8vmv1oGXfALTMIEEKR8DRme3M2Esbxyvtrvyk",
+    "title":"Books Becho",
+    "university":"Mumbai University",
+    "degree":"Bachelors of Engineering",
+    "stream":"Computer Science",
+    "domain":"Mobile App",
+    "description":"A Mobile App where students can sell their old books and buy their books from others at low price. In this way the paper wastage will be less and students expances on books will also reduce.",
+    "techused":"we have used Flutter, Express as framework and Dart, JavaScript langauge. We have used MySQL for database and Node.js to run the backend on localhost.",
+    "references":"Google, Stack overflow, W3School, Tutorials Point",
+    "difficulty":"5/10",
+    "keywords":"Students, Sell books, buy books, Education",
+    "year":"2020",
+    "student_id":"1",
+    "student_name":"Shreyash Singh",
+    "student_email":"sshreyash34@gmail.com",
+    "student_phone":"7030346254",
+    "student_state":"Maharashtra",
+    "code_link":"Github/shreyash333/",
+    "paper_link":"www.ijert.org/IJERTV9I.pdf",
+    "video_link":"www.youtube.com/v=l7TuiSjmIb4"
+
+}
+
+
+
+###
+POST http://localhost:12345/gettopprojects
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoc2luZ2g2MDFAZ21haWwuY29tIiwiaWF0IjoxNjE2NjYyNjkxLCJleHAiOjE2MTc1MjY2OTF9.toHDZIPlL0bJ_NS303BQ9IfCZm8mJuQSdUjVYFtFz2o",
+    "student_id":"2"
+
+}
+
+
+###
+POST http://localhost:12345/followStudent
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoc2luZ2g2MDFAZ21haWwuY29tIiwiaWF0IjoxNjE2NjYyNjkxLCJleHAiOjE2MTc1MjY2OTF9.toHDZIPlL0bJ_NS303BQ9IfCZm8mJuQSdUjVYFtFz2o",
+    "followstudentid":"2"
+
+}
+
+
+###
+POST http://localhost:12345/delete_project
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoc2luZ2g2MDFAZ21haWwuY29tIiwiaWF0IjoxNjE2NjYyNjkxLCJleHAiOjE2MTc1MjY2OTF9.toHDZIPlL0bJ_NS303BQ9IfCZm8mJuQSdUjVYFtFz2o",
+    "projectid":"1",
+    "student_id":"2"
+
+}
+
+
+
+###
+POST http://localhost:12345/rate_project
+Content-Type: application/json
+
+{
+    "token" :"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InNocmV5YXNoc2luZ2g2MDFAZ21haWwuY29tIiwiaWF0IjoxNjE2ODE5OTQzLCJleHAiOjE2MTc2ODM5NDN9.BiKuWKRz-yOD24VOM2CmYpGEitBMKb-mS2eRQ82Ip-k",
+    "projectid":"1",
+    "student_id":"2",
+    "rate" : 3
+}

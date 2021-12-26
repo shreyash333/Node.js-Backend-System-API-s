@@ -267,7 +267,7 @@ Team Lazy Coders`;
                 service: "Gmail",
                 auth: {
                     user: "teamlazycoders@gmail.com",
-                    pass: "AdiDharmYash2021"
+                    pass: "##########"
                 }
             });
             var mailOptions = {
